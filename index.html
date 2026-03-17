@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -92,6 +93,11 @@
   .card:hover .btn { gap: 12px; }
   .card-1 .btn { background: rgba(240,165,0,.12); color: #f0a500; border: 1px solid rgba(240,165,0,.25); }
   .card-2 .btn { background: rgba(255,0,0,.1); color: #ff6b6b; border: 1px solid rgba(255,0,0,.2); }
+  .card-3 .glow { background: radial-gradient(circle, rgba(225,48,108,.15) 0%, transparent 70%); }
+  .card-3:hover { border-color: rgba(225,48,108,.3); }
+  .card-3 .num { color: #e1306c; }
+  .card-3 .topic { color: #e1306c; }
+  .card-3 .btn { background: rgba(225,48,108,.1); color: #e1306c; border: 1px solid rgba(225,48,108,.25); }
 
   footer { color: var(--muted); font-size: .78rem; text-align: center; }
 </style>
@@ -123,6 +129,17 @@
     <div class="topic">Topic 2 · Favorite App</div>
     <h2>My Favorite App — YouTube</h2>
     <p>A video-sharing platform I use every day to learn, relax, and stay inspired.</p>
+    <span class="btn">Open slides →</span>
+  </a>
+
+
+  <a class="card card-3" href="favorite-app-instagram.html">
+    <div class="glow"></div>
+    <div class="num">03</div>
+    <div class="icon">📸</div>
+    <div class="topic">Topic 3 · Favorite App</div>
+    <h2>My Favorite App — Instagram</h2>
+    <p>A social networking app I use every day to stay connected and discover new trends.</p>
     <span class="btn">Open slides →</span>
   </a>
 
