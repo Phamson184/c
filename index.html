@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>My Presentations</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  :root { --bg:#0a0a0a; --card:#141414; --text:#f1f1f1; --muted:#666; }
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  body {
+    background: var(--bg);
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 48px;
+  }
+
+  header { text-align: center; }
+  header .eyebrow {
+    font-size: .75rem; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 12px;
+  }
+  header h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 800; line-height: 1.15;
+  }
+  header p { color: var(--muted); font-size: .95rem; margin-top: 10px; }
+
+  .cards {
+    display: flex; gap: 24px; flex-wrap: wrap; justify-content: center;
+    width: 100%; max-width: 780px;
+  }
+
+  .card {
+    flex: 1; min-width: 280px; max-width: 360px;
+    background: var(--card);
+    border-radius: 20px;
+    padding: 32px 28px;
+    text-decoration: none;
+    color: var(--text);
+    border: 1px solid rgba(255,255,255,.07);
+    transition: transform .25s, box-shadow .25s, border-color .25s;
+    position: relative; overflow: hidden;
+  }
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 60px rgba(0,0,0,.6);
+  }
+  .card .glow {
+    position: absolute; top: -60px; right: -60px;
+    width: 200px; height: 200px; border-radius: 50%;
+    pointer-events: none;
+  }
+  .card-1 .glow { background: radial-gradient(circle, rgba(240,165,0,.15) 0%, transparent 70%); }
+  .card-2 .glow { background: radial-gradient(circle, rgba(255,0,0,.15) 0%, transparent 70%); }
+  .card-1:hover { border-color: rgba(240,165,0,.3); }
+  .card-2:hover { border-color: rgba(255,0,0,.3); }
+
+  .card .num {
+    font-family: 'Syne', sans-serif;
+    font-size: 3.5rem; font-weight: 800;
+    line-height: 1; margin-bottom: 16px;
+    opacity: .12;
+  }
+  .card-1 .num { color: #f0a500; }
+  .card-2 .num { color: #ff0000; }
+
+  .card .icon { font-size: 2rem; margin-bottom: 14px; }
+  .card .topic {
+    font-size: .7rem; letter-spacing: .14em;
+    text-transform: uppercase; margin-bottom: 8px;
+  }
+  .card-1 .topic { color: #f0a500; }
+  .card-2 .topic { color: #ff4444; }
+
+  .card h2 { font-family: 'Syne', sans-serif; font-size: 1.25rem; font-weight: 700; margin-bottom: 10px; }
+  .card p { font-size: .85rem; color: var(--muted); line-height: 1.65; margin-bottom: 24px; }
+
+  .card .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 20px; border-radius: 100px;
+    font-size: .82rem; font-weight: 500;
+    transition: gap .2s;
+  }
+  .card:hover .btn { gap: 12px; }
+  .card-1 .btn { background: rgba(240,165,0,.12); color: #f0a500; border: 1px solid rgba(240,165,0,.25); }
+  .card-2 .btn { background: rgba(255,0,0,.1); color: #ff6b6b; border: 1px solid rgba(255,0,0,.2); }
+
+  footer { color: var(--muted); font-size: .78rem; text-align: center; }
+</style>
+</head>
+<body>
+
+<header>
+  <p class="eyebrow">English Presentation</p>
+  <h1>My Presentations</h1>
+  <p>Click a card to open the slide deck</p>
+</header>
+
+<div class="cards">
+
+  <a class="card card-1" href="favorite-place.html">
+    <div class="glow"></div>
+    <div class="num">01</div>
+    <div class="icon">🏫</div>
+    <div class="topic">Topic 1 · Favorite Place</div>
+    <h2>My Favorite Place to Go</h2>
+    <p>The 5th floor of Building A — a quiet spot with an amazing view of Landmark 81.</p>
+    <span class="btn">Open slides →</span>
+  </a>
+
+  <a class="card card-2" href="favorite-app-youtube.html">
+    <div class="glow"></div>
+    <div class="num">02</div>
+    <div class="icon">▶️</div>
+    <div class="topic">Topic 2 · Favorite App</div>
+    <h2>My Favorite App — YouTube</h2>
+    <p>A video-sharing platform I use every day to learn, relax, and stay inspired.</p>
+    <span class="btn">Open slides →</span>
+  </a>
+
+</div>
+
+<footer>phamson184.github.io/vlu</footer>
+
+</body>
+</html>
